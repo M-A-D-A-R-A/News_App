@@ -22,10 +22,12 @@ environment:
 
 dependencies:
   bloc: ^7.1.0
+  cached_network_image: ^3.1.0
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
   flutter_bloc: ^7.2.0
+  http: ^0.13.3
 
 dev_dependencies:
   flutter_test:
