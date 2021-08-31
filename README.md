@@ -1,16 +1,41 @@
-# news_app
+# News App
 
-A new Flutter project.
+## Description
+ - A news application that fetches the latest news via an API and displays, in a reverse sorted chronological way.
 
-## Getting Started
+## Features
+ - Nativ Splash screen animation
+ - Data Fetched from API  (https://newsapi.org/)
+ - Null Safe
+ - The loading indicator, retry button, and refresh button where ever required.
 
-This project is a starting point for a Flutter application.
+## Future Implemention
+ - Authentication: Email/Password and OAuth.
+ - Bookmark items and sync with the cloud database.
+ - Search for particular news via keywords.
+ - Add support for supplying multiple API keys so that if the quota is exhausted on one, it automatically uses the next available key.
 
-A few resources to get you started if this is your first Flutter project:
+ ## ⚡Screenshots
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+<br>
+<p align="center">
+    <img src="screenshots/splashscreen.jpeg" width="30%"></img>
+    <img src="screenshots/homescreen.jpeg" width="30%"></img>
+    <img src="screenshots/splashscreen.jpeg" width="30%"></img> 
+    <br>
+    <img src="screenshots/drawer.jpeg" width="30%"></img> 
+    <img src="screenshots/webviewscreen.jpeg" width="30%"></img>
+    <img src="screenshots/searchscreen.jpeg" width="30%"></img>
+    <br> 
+</p>
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<br>
+
+## 💻Tech Stack
+
+- Flutter
+- Firebase
+
+<br>
+
+ 
