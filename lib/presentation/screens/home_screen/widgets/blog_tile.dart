@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/presentation/screens/dashboard/article_view.dart';
 
 class NewsTile extends StatelessWidget {
   final String imgUrl, title, desc, content, posturl;
@@ -9,11 +10,11 @@ class NewsTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        // Navigator.push(context, MaterialPageRoute(
-        //     builder: (context) => ArticleView(
-        //       postUrl: posturl,
-        //     )
-        // ));
+        Navigator.push(context, MaterialPageRoute(
+            builder: (context) => ArticleView(
+              postUrl: posturl,
+            )
+        ));
       },
       child: Container(
           margin: EdgeInsets.only(bottom: 24),

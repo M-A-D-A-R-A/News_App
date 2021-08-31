@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:news_app/presentation/screens/dashboard/drawer.dart';
 import 'package:news_app/presentation/screens/home_screen/home_screen.dart';
 
 import '../../../core/constants/strings.dart';
@@ -61,6 +62,7 @@ class _DashBoardState extends State<DashBoard> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.redAccent,
         centerTitle: true,
         title: Text(Strings.appTitle),
         elevation: 0.0,
@@ -80,6 +82,7 @@ class _DashBoardState extends State<DashBoard> {
           ),
             
         ),
+        drawer: MyDrawer(),
     );
   }
 }

@@ -32,3 +32,34 @@ class News {
     }
   }
 }
+
+class NewsForCategorie {
+  List<Article> news = [];
+
+  Future<void> getNewsForCategory(String category) async {
+    /*String url = "http://newsapi.org/v2/everything?q=$category&apiKey=${apiKey}";*/
+    String url =
+        "http://newsapi.org/v2/top-headlines?country=in&category=$category&apiKey=11d9fae4993c44d98db59238dc39df2c";
+
+    var response = await http.get(Uri.parse(url));
+
+    var jsonData = jsonDecode(response.body);
+
+    if (jsonData['status'] == "ok") {
+      jsonData["articles"].forEach((element) {
+        if (element['urlToImage'] != null && element['description'] != null) {
+          Article article = Article(
+            title: element['title'],
+            author: element['author'],
+            description: element['description'],
+            urlToImage: element['urlToImage'],
+            publshedAt: DateTime.parse(element['publishedAt']),
+            content: element["content"],
+            articleUrl: element["url"],
+          );
+          news.add(article);
+        }
+      });
+    }
+  }
+}

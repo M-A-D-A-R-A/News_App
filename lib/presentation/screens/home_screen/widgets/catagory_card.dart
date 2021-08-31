@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:news_app/presentation/screens/dashboard/catagory_view.dart';
 
 class CategoryCard extends StatelessWidget {
   final String? imageAssetUrl, categoryName;
@@ -10,11 +11,11 @@ class CategoryCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        // Navigator.push(context, MaterialPageRoute(
-        //   builder: (context) => CategoryNews(
-        //     newsCategory: categoryName.toLowerCase(),
-        //   )
-        // ));
+        Navigator.push(context, MaterialPageRoute(
+          builder: (context) => CategoryNews(
+            newsCategory: categoryName!.toLowerCase(),
+          )
+        ));
       },
       child: Container(
         margin: EdgeInsets.only(right: 14),
