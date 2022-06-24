@@ -10,7 +10,7 @@ jobs:
   test:
     strategy:
       matrix:
-        platform: [windows-latest, ubuntu-latest, macos-latest]
+        platform: [windows-latest, ubuntu-latest]
     runs-on: ${{matrix.platform}}
     steps:
       - uses: actions/checkout@v1
@@ -24,13 +24,13 @@ jobs:
           # channel: "stable"
       - run: flutter pub get
       - run: flutter format --set-exit-if-changed .
-      - run: flutter analyze .
+#       - run: flutter analyze .
       - run: flutter test
 
   build:
     strategy:
       matrix:
-        platform: [windows-latest, macos-latest, ubuntu-latest]
+        platform: [windows-latest, ubuntu-latest]
     runs-on: ${{matrix.platform}}
     steps:
       - uses: actions/checkout@v1
@@ -41,10 +41,10 @@ jobs:
         with:
           # Temporary fix to failing CI
           flutter-version: '3.0.1'
-          # channel: "stable"
+#           channel: "stable"
       - run: flutter pub get
       - run: flutter format --set-exit-if-changed .
-      - run: flutter analyze .
+#       - run: flutter analyze .
       - run: flutter test
       # - run: flutter build apk
       # - uses: actions/upload-artifact@v1
