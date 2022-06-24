@@ -10,12 +10,13 @@ class CategoryCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
-        Navigator.push(context, MaterialPageRoute(
-          builder: (context) => CategoryNews(
-            newsCategory: categoryName!.toLowerCase(),
-          )
-        ));
+      onTap: () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => CategoryNews(
+                      newsCategory: categoryName!.toLowerCase(),
+                    )));
       },
       child: Container(
         margin: EdgeInsets.only(right: 14),
@@ -36,8 +37,7 @@ class CategoryCard extends StatelessWidget {
               width: 120,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(5),
-                color: Colors.black26
-              ),
+                  color: Colors.black26),
               child: Text(
                 categoryName!,
                 textAlign: TextAlign.center,

@@ -14,8 +14,8 @@ class AppRouter {
       case home:
         return MaterialPageRoute(
           builder: (_) => DashBoard(
-            // title: Strings.homeScreenTitle,
-          ),
+              // title: Strings.homeScreenTitle,
+              ),
         );
       default:
         throw const RouteException('Route not found!');

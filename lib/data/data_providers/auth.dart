@@ -6,7 +6,7 @@
 //   Future signInAnon() async {
 //     try {
 //      AuthRes result= await _auth.signInAnonymously();
-     
+
 //     } catch (e) {}
 //   }
 // }

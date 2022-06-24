@@ -15,8 +15,6 @@ class DashBoard extends StatefulWidget {
 }
 
 class _DashBoardState extends State<DashBoard> {
-
-  
   int _currentIndex = 0;
 
   void _onTapped(int index) {
@@ -24,7 +22,7 @@ class _DashBoardState extends State<DashBoard> {
       _currentIndex = index;
     });
   }
-  
+
   static const List<Widget> _tabs = <Widget>[
     HomeScreen(),
     Center(
@@ -39,7 +37,6 @@ class _DashBoardState extends State<DashBoard> {
         style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
       ),
     ),
-  
   ];
 
   List<BottomNavigationBarItem> _item = [
@@ -55,7 +52,6 @@ class _DashBoardState extends State<DashBoard> {
         icon: Icon(CupertinoIcons.search),
         label: "Search",
         backgroundColor: Colors.black),
-   
   ];
 
   @override
@@ -67,22 +63,26 @@ class _DashBoardState extends State<DashBoard> {
         title: Text(Strings.appTitle),
         elevation: 0.0,
       ),
-      body: Material(child: Container(child: _tabs.elementAt(_currentIndex),),),
-      bottomNavigationBar:  ClipRRect(
-           borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(30.0),
-          topRight: Radius.circular(30.0),),
-          child: BottomNavigationBar(
-            items: _item,
-            type: BottomNavigationBarType.shifting,
-            currentIndex: _currentIndex,
-            selectedItemColor: Colors.white38,
-            onTap: _onTapped,
-            backgroundColor: Colors.white38,
-          ),
-            
+      body: Material(
+        child: Container(
+          child: _tabs.elementAt(_currentIndex),
         ),
-        drawer: MyDrawer(),
+      ),
+      bottomNavigationBar: ClipRRect(
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(30.0),
+          topRight: Radius.circular(30.0),
+        ),
+        child: BottomNavigationBar(
+          items: _item,
+          type: BottomNavigationBarType.shifting,
+          currentIndex: _currentIndex,
+          selectedItemColor: Colors.white38,
+          onTap: _onTapped,
+          backgroundColor: Colors.white38,
+        ),
+      ),
+      drawer: MyDrawer(),
     );
   }
 }

@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.news_app">
+    package="com.example.news_app"
+    xmlns:tools="http://schemas.android.com/tools">
    <application
         android:label="news_app"
         android:icon="@mipmap/ic_launcher">

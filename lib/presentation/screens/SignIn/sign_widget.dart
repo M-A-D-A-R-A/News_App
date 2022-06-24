@@ -11,7 +11,6 @@
 // class _GoogleSignInButtonState extends State<GoogleSignInButton> {
 //   bool _isSigningIn = false;
 
-  
 //   @override
 //   Widget build(BuildContext context) {
 //     return Padding(
@@ -41,7 +40,7 @@
 //                 });
 
 //                 if (user != null) {
-                  
+
 //                   Navigator.of(context).pushReplacement(
 //                     MaterialPageRoute(
 //                       builder: (context) => DashBoard(),

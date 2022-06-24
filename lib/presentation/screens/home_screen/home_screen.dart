@@ -46,7 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: <Widget>[
                   /// Categories
                   Container(
-                    padding: EdgeInsets.symmetric(horizontal: 12,vertical: 8),
+                    padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                     height: 70,
                     child: ListView.builder(
                         scrollDirection: Axis.horizontal,

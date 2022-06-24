@@ -6,6 +6,7 @@ class AppBlocObserver extends BlocObserver {
     // TODO: implement onChange
     super.onChange(bloc, change);
   }
+
   @override
   void onClose(BlocBase bloc) {
     // TODO: implement onClose
