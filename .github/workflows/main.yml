@@ -15,9 +15,11 @@ jobs:
     - run: flutter clean
     - run: flutter pub get
     - run: flutter format --set-exit-if-changed .
-    - run: flutter build apk --debug --split-per-abi
+   
 
 #     Test case are failing flutter SDk
-#     - run: flutter test
-    
+    - run: flutter test
+
+#     Build APk (Some issue here)
 #     - run: flutter build apk 
+#     - run: flutter build apk --debug --split-per-abi
