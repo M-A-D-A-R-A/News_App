@@ -1,4 +1,7 @@
-on: push
+on:
+  push:
+    paths:
+      - 'News-App/lib/**'
 name: Test, Build and Release apk
 jobs:
   build:
