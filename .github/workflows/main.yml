@@ -3,15 +3,20 @@ on:
     paths:
       - 'lib/**'
 name: Test, Build and Release apk
+
+
+
 jobs:
   build:
     name: Build APK
     runs-on: ubuntu-latest
+    
+    defaults:
+      run:
+        working-directory: ./lib
+   
     steps:
     - uses: actions/checkout@v1
-    - name: Setup Flutter
-      working-directory: ./lib
-#       run: flutter pub get
     - uses: actions/setup-java@v1
       with:
         java-version: '12.x'
