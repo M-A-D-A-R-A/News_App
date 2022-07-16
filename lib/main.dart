@@ -12,6 +12,8 @@ void main() {
   runApp(MyApp());
 }
 
+// UGH this should run the build!!!
+
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
